@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://jitpack.io' }
+        mavenCentral()
+        maven {
+            url "https://artifactory.qiscus.com/artifactory/qiscus-library-open-source"
+        }
+        maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
+    }
+}
+rootProject.name = "IoT Sample Sender"
+include ':app'
